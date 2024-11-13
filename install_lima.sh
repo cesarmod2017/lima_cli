@@ -4,7 +4,7 @@
 CLI_URL="https://raw.githubusercontent.com/cesarmod2017/lima_cli/main/lima_latest.tar.gz"
 
 # Directory where the CLI will be installed
-INSTALL_DIR="/usr/local/bin"
+INSTALL_DIR="/usr/local/bin/lima"
 
 # Function to display a message
 function print_message() {
