@@ -1,8 +1,7 @@
-
 #!/bin/bash
 
 # URL for the latest release of the lima CLI binary
-CLI_URL="https://github.com/cesarmod2017/lima_cli/blob/main/lima_latest.tar.gz"
+CLI_URL="https://raw.githubusercontent.com/cesarmod2017/lima_cli/main/lima_latest.tar.gz"
 
 # Directory where the CLI will be installed
 INSTALL_DIR="/usr/local/bin"
@@ -22,6 +21,13 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
+# Verify if the downloaded file is in gzip format
+if ! gzip -t lima_latest.tar.gz &> /dev/null; then
+    echo "The downloaded file is not in gzip format. Please check the file and try again."
+    rm lima_latest.tar.gz
+    exit 1
+fi
+
 # Extract the downloaded archive
 print_message "Extracting the CLI..."
 tar -xzf lima_latest.tar.gz -C $INSTALL_DIR
@@ -34,5 +40,3 @@ rm lima_latest.tar.gz
 
 # Confirmation message
 print_message "Lima CLI installed successfully! You can now use 'lima' as a command."
-
-
