@@ -34,7 +34,7 @@ tar -xzf lima_latest.tar.gz -C $INSTALL_DIR
 
 # Ensure the binary is executable
 if [[ -f "$INSTALL_DIR/lima" ]]; then
-    chmod +x "$INSTALL_DIR/lima"
+    chmod +x "$INSTALL_DIR/Lima"
 else
     echo "Error: lima binary not found in $INSTALL_DIR after extraction."
     rm lima_latest.tar.gz
@@ -46,3 +46,5 @@ rm lima_latest.tar.gz
 
 # Confirmation message
 print_message "Lima CLI installed successfully! You can now use 'lima' as a command."
+
+ 
