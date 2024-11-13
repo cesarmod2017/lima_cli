@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # URL for the latest release of the lima CLI binary
-CLI_URL="https://example.com/releases/lima_latest.tar.gz"
+CLI_URL="https://github.com/cesarmod2017/lima_cli/blob/main/lima_latest.tar.gz"
 
 # Directory where the CLI will be installed
 INSTALL_DIR="/usr/local/bin"
