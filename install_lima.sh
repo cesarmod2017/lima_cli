@@ -40,3 +40,4 @@ rm lima_latest.tar.gz
 
 # Confirmation message
 print_message "Lima CLI installed successfully! You can now use 'lima' as a command."
+print_message 'Finishe'
